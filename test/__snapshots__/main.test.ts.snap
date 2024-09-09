@@ -1,0 +1,2644 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Snapshot 1`] = `
+{
+  "Mappings": {
+    "LatestNodeRuntimeMap": {
+      "af-south-1": {
+        "value": "nodejs20.x",
+      },
+      "ap-east-1": {
+        "value": "nodejs20.x",
+      },
+      "ap-northeast-1": {
+        "value": "nodejs20.x",
+      },
+      "ap-northeast-2": {
+        "value": "nodejs20.x",
+      },
+      "ap-northeast-3": {
+        "value": "nodejs20.x",
+      },
+      "ap-south-1": {
+        "value": "nodejs20.x",
+      },
+      "ap-south-2": {
+        "value": "nodejs20.x",
+      },
+      "ap-southeast-1": {
+        "value": "nodejs20.x",
+      },
+      "ap-southeast-2": {
+        "value": "nodejs20.x",
+      },
+      "ap-southeast-3": {
+        "value": "nodejs20.x",
+      },
+      "ap-southeast-4": {
+        "value": "nodejs20.x",
+      },
+      "ap-southeast-5": {
+        "value": "nodejs20.x",
+      },
+      "ap-southeast-7": {
+        "value": "nodejs20.x",
+      },
+      "ca-central-1": {
+        "value": "nodejs20.x",
+      },
+      "ca-west-1": {
+        "value": "nodejs20.x",
+      },
+      "cn-north-1": {
+        "value": "nodejs18.x",
+      },
+      "cn-northwest-1": {
+        "value": "nodejs18.x",
+      },
+      "eu-central-1": {
+        "value": "nodejs20.x",
+      },
+      "eu-central-2": {
+        "value": "nodejs20.x",
+      },
+      "eu-isoe-west-1": {
+        "value": "nodejs18.x",
+      },
+      "eu-north-1": {
+        "value": "nodejs20.x",
+      },
+      "eu-south-1": {
+        "value": "nodejs20.x",
+      },
+      "eu-south-2": {
+        "value": "nodejs20.x",
+      },
+      "eu-west-1": {
+        "value": "nodejs20.x",
+      },
+      "eu-west-2": {
+        "value": "nodejs20.x",
+      },
+      "eu-west-3": {
+        "value": "nodejs20.x",
+      },
+      "il-central-1": {
+        "value": "nodejs20.x",
+      },
+      "me-central-1": {
+        "value": "nodejs20.x",
+      },
+      "me-south-1": {
+        "value": "nodejs20.x",
+      },
+      "mx-central-1": {
+        "value": "nodejs20.x",
+      },
+      "sa-east-1": {
+        "value": "nodejs20.x",
+      },
+      "us-east-1": {
+        "value": "nodejs20.x",
+      },
+      "us-east-2": {
+        "value": "nodejs20.x",
+      },
+      "us-gov-east-1": {
+        "value": "nodejs18.x",
+      },
+      "us-gov-west-1": {
+        "value": "nodejs18.x",
+      },
+      "us-iso-east-1": {
+        "value": "nodejs18.x",
+      },
+      "us-iso-west-1": {
+        "value": "nodejs18.x",
+      },
+      "us-isob-east-1": {
+        "value": "nodejs18.x",
+      },
+      "us-west-1": {
+        "value": "nodejs20.x",
+      },
+      "us-west-2": {
+        "value": "nodejs20.x",
+      },
+    },
+  },
+  "Outputs": {
+    "AdDecisionServerVASTEndpoint09FC0834": {
+      "Value": {
+        "Fn::Join": [
+          "",
+          [
+            "https://",
+            {
+              "Ref": "AdDecisionServerVASTEndpoint304968C7",
+            },
+            ".execute-api.",
+            {
+              "Ref": "AWS::Region",
+            },
+            ".",
+            {
+              "Ref": "AWS::URLSuffix",
+            },
+            "/",
+            {
+              "Ref": "AdDecisionServerVASTEndpointDeploymentStageprod0E51DA90",
+            },
+            "/",
+          ],
+        ],
+      },
+    },
+    "EventEndTime": {
+      "Description": "Event end time",
+      "Export": {
+        "Name": {
+          "Fn::Join": [
+            "",
+            [
+              {
+                "Ref": "AWS::StackName",
+              },
+              "EventEndTime",
+            ],
+          ],
+        },
+      },
+      "Value": "2024-09-07T07:54:39.926Z",
+    },
+    "EventStartTime": {
+      "Description": "Event start time",
+      "Export": {
+        "Name": {
+          "Fn::Join": [
+            "",
+            [
+              {
+                "Ref": "AWS::StackName",
+              },
+              "EventStartTime",
+            ],
+          ],
+        },
+      },
+      "Value": "2024-09-07T07:34:39.926Z",
+    },
+    "MediaTailorConfigName": {
+      "Description": "MediaTailor playback config name",
+      "Export": {
+        "Name": {
+          "Fn::Join": [
+            "",
+            [
+              {
+                "Ref": "AWS::StackName",
+              },
+              "MediaTailorConfigName",
+            ],
+          ],
+        },
+      },
+      "Value": "89f21bd7-bbb0-4a9b-bd81-e7cb6f9ad48b",
+    },
+  },
+  "Parameters": {
+    "BootstrapVersion": {
+      "Default": "/cdk-bootstrap/hnb659fds/version",
+      "Description": "Version of the CDK Bootstrap resources in this environment, automatically retrieved from SSM Parameter Store. [cdk:skip]",
+      "Type": "AWS::SSM::Parameter::Value<String>",
+    },
+  },
+  "Resources": {
+    "AWS679f53fac002430cb0da5b7982bd22872D164C4C": {
+      "DependsOn": [
+        "AWS679f53fac002430cb0da5b7982bd2287ServiceRoleC1EA0FF2",
+      ],
+      "Properties": {
+        "Code": {
+          "S3Bucket": {
+            "Fn::Sub": "cdk-hnb659fds-assets-\${AWS::AccountId}-\${AWS::Region}",
+          },
+          "S3Key": "97f30e67419a1676a2215492723e5add1aa491caf0cbe2dd878fc4fab0468cd4.zip",
+        },
+        "Handler": "index.handler",
+        "Role": {
+          "Fn::GetAtt": [
+            "AWS679f53fac002430cb0da5b7982bd2287ServiceRoleC1EA0FF2",
+            "Arn",
+          ],
+        },
+        "Runtime": {
+          "Fn::FindInMap": [
+            "LatestNodeRuntimeMap",
+            {
+              "Ref": "AWS::Region",
+            },
+            "value",
+          ],
+        },
+        "Timeout": 120,
+      },
+      "Type": "AWS::Lambda::Function",
+    },
+    "AWS679f53fac002430cb0da5b7982bd2287ServiceRoleC1EA0FF2": {
+      "Properties": {
+        "AssumeRolePolicyDocument": {
+          "Statement": [
+            {
+              "Action": "sts:AssumeRole",
+              "Effect": "Allow",
+              "Principal": {
+                "Service": "lambda.amazonaws.com",
+              },
+            },
+          ],
+          "Version": "2012-10-17",
+        },
+        "ManagedPolicyArns": [
+          {
+            "Fn::Join": [
+              "",
+              [
+                "arn:",
+                {
+                  "Ref": "AWS::Partition",
+                },
+                ":iam::aws:policy/service-role/AWSLambdaBasicExecutionRole",
+              ],
+            ],
+          },
+        ],
+      },
+      "Type": "AWS::IAM::Role",
+    },
+    "AdDecisionServerApiGatewayLogGroup29E15A43": {
+      "DeletionPolicy": "Delete",
+      "Properties": {
+        "LogGroupName": "/aws/apigateway/ads-logs-test",
+        "RetentionInDays": 731,
+      },
+      "Type": "AWS::Logs::LogGroup",
+      "UpdateReplacePolicy": "Delete",
+    },
+    "AdDecisionServerScheduleSCTEB15B2BD0": {
+      "DependsOn": [
+        "AdDecisionServerScheduleSCTEServiceRoleDefaultPolicy9B8CE710",
+        "AdDecisionServerScheduleSCTEServiceRole8C244D42",
+      ],
+      "Properties": {
+        "Code": {
+          "S3Bucket": {
+            "Fn::Sub": "cdk-hnb659fds-assets-\${AWS::AccountId}-\${AWS::Region}",
+          },
+          "S3Key": "9ab12fee3e44fea4505a5dd1a05c057f17326b9e54741c7250e0e1515e33bc92.zip",
+        },
+        "Environment": {
+          "Variables": {
+            "CLEARANCE_RULE": "SEQUENCIAL",
+            "CREATIVES": {
+              "Fn::Join": [
+                "",
+                [
+                  "[{"duration":60,"url":"https://",
+                  {
+                    "Fn::GetAtt": [
+                      "FilePublisherDistribution877DC374",
+                      "DomainName",
+                    ],
+                  },
+                  "/60sec.mp4","delivery":"progressive","mimeType":"video/mp4","width":1280,"height":720}]",
+                ],
+              ],
+            },
+            "NODE_ENV": "test",
+          },
+        },
+        "Handler": "index.handler",
+        "Role": {
+          "Fn::GetAtt": [
+            "AdDecisionServerScheduleSCTEServiceRole8C244D42",
+            "Arn",
+          ],
+        },
+        "Runtime": "nodejs18.x",
+        "Timeout": 30,
+      },
+      "Type": "AWS::Lambda::Function",
+    },
+    "AdDecisionServerScheduleSCTELogRetentionBD399FF4": {
+      "Properties": {
+        "LogGroupName": {
+          "Fn::Join": [
+            "",
+            [
+              "/aws/lambda/",
+              {
+                "Ref": "AdDecisionServerScheduleSCTEB15B2BD0",
+              },
+            ],
+          ],
+        },
+        "RetentionInDays": 14,
+        "ServiceToken": {
+          "Fn::GetAtt": [
+            "LogRetentionaae0aa3c5b4d4f87b02d85b201efdd8aFD4BFC8A",
+            "Arn",
+          ],
+        },
+      },
+      "Type": "Custom::LogRetention",
+    },
+    "AdDecisionServerScheduleSCTEServiceRole8C244D42": {
+      "Properties": {
+        "AssumeRolePolicyDocument": {
+          "Statement": [
+            {
+              "Action": "sts:AssumeRole",
+              "Effect": "Allow",
+              "Principal": {
+                "Service": "lambda.amazonaws.com",
+              },
+            },
+          ],
+          "Version": "2012-10-17",
+        },
+        "ManagedPolicyArns": [
+          {
+            "Fn::Join": [
+              "",
+              [
+                "arn:",
+                {
+                  "Ref": "AWS::Partition",
+                },
+                ":iam::aws:policy/service-role/AWSLambdaBasicExecutionRole",
+              ],
+            ],
+          },
+        ],
+      },
+      "Type": "AWS::IAM::Role",
+    },
+    "AdDecisionServerScheduleSCTEServiceRoleDefaultPolicy9B8CE710": {
+      "Properties": {
+        "PolicyDocument": {
+          "Statement": [
+            {
+              "Action": "medialive:*",
+              "Effect": "Allow",
+              "Resource": "*",
+            },
+          ],
+          "Version": "2012-10-17",
+        },
+        "PolicyName": "AdDecisionServerScheduleSCTEServiceRoleDefaultPolicy9B8CE710",
+        "Roles": [
+          {
+            "Ref": "AdDecisionServerScheduleSCTEServiceRole8C244D42",
+          },
+        ],
+      },
+      "Type": "AWS::IAM::Policy",
+    },
+    "AdDecisionServerVASTEndpoint304968C7": {
+      "Properties": {
+        "BinaryMediaTypes": [
+          "application/xml",
+        ],
+        "Name": "VAST-Endpoint",
+      },
+      "Type": "AWS::ApiGateway::RestApi",
+    },
+    "AdDecisionServerVASTEndpointAccount5B709F22": {
+      "DeletionPolicy": "Delete",
+      "DependsOn": [
+        "AdDecisionServerVASTEndpoint304968C7",
+      ],
+      "Properties": {
+        "CloudWatchRoleArn": {
+          "Fn::GetAtt": [
+            "AdDecisionServerVASTEndpointCloudWatchRoleE6BA65AA",
+            "Arn",
+          ],
+        },
+      },
+      "Type": "AWS::ApiGateway::Account",
+      "UpdateReplacePolicy": "Delete",
+    },
+    "AdDecisionServerVASTEndpointCloudWatchRoleE6BA65AA": {
+      "DeletionPolicy": "Delete",
+      "Properties": {
+        "AssumeRolePolicyDocument": {
+          "Statement": [
+            {
+              "Action": "sts:AssumeRole",
+              "Effect": "Allow",
+              "Principal": {
+                "Service": "apigateway.amazonaws.com",
+              },
+            },
+          ],
+          "Version": "2012-10-17",
+        },
+        "ManagedPolicyArns": [
+          {
+            "Fn::Join": [
+              "",
+              [
+                "arn:",
+                {
+                  "Ref": "AWS::Partition",
+                },
+                ":iam::aws:policy/service-role/AmazonAPIGatewayPushToCloudWatchLogs",
+              ],
+            ],
+          },
+        ],
+      },
+      "Type": "AWS::IAM::Role",
+      "UpdateReplacePolicy": "Delete",
+    },
+    "AdDecisionServerVASTEndpointDeployment57E301FAfdf222e6c6112a3779eb3443dec47ad5": {
+      "DependsOn": [
+        "AdDecisionServerVASTEndpointvastGET7D1E957D",
+        "AdDecisionServerVASTEndpointvast753ADAA5",
+      ],
+      "Properties": {
+        "Description": "Automatically created by the RestApi construct",
+        "RestApiId": {
+          "Ref": "AdDecisionServerVASTEndpoint304968C7",
+        },
+      },
+      "Type": "AWS::ApiGateway::Deployment",
+    },
+    "AdDecisionServerVASTEndpointDeploymentStageprod0E51DA90": {
+      "DependsOn": [
+        "AdDecisionServerVASTEndpointAccount5B709F22",
+      ],
+      "Properties": {
+        "AccessLogSetting": {
+          "DestinationArn": {
+            "Fn::GetAtt": [
+              "AdDecisionServerApiGatewayLogGroup29E15A43",
+              "Arn",
+            ],
+          },
+          "Format": "{"requestId":"$context.requestId","ip":"$context.identity.sourceIp","user":"$context.identity.user","caller":"$context.identity.caller","requestTime":"$context.requestTime","httpMethod":"$context.httpMethod","resourcePath":"$context.resourcePath","status":"$context.status","protocol":"$context.protocol","responseLength":"$context.responseLength"}",
+        },
+        "DeploymentId": {
+          "Ref": "AdDecisionServerVASTEndpointDeployment57E301FAfdf222e6c6112a3779eb3443dec47ad5",
+        },
+        "MethodSettings": [
+          {
+            "DataTraceEnabled": true,
+            "HttpMethod": "*",
+            "LoggingLevel": "INFO",
+            "ResourcePath": "/*",
+          },
+        ],
+        "RestApiId": {
+          "Ref": "AdDecisionServerVASTEndpoint304968C7",
+        },
+        "StageName": "prod",
+      },
+      "Type": "AWS::ApiGateway::Stage",
+    },
+    "AdDecisionServerVASTEndpointvast753ADAA5": {
+      "Properties": {
+        "ParentId": {
+          "Fn::GetAtt": [
+            "AdDecisionServerVASTEndpoint304968C7",
+            "RootResourceId",
+          ],
+        },
+        "PathPart": "vast",
+        "RestApiId": {
+          "Ref": "AdDecisionServerVASTEndpoint304968C7",
+        },
+      },
+      "Type": "AWS::ApiGateway::Resource",
+    },
+    "AdDecisionServerVASTEndpointvastGET7D1E957D": {
+      "Properties": {
+        "AuthorizationType": "NONE",
+        "HttpMethod": "GET",
+        "Integration": {
+          "IntegrationHttpMethod": "POST",
+          "IntegrationResponses": [
+            {
+              "ResponseParameters": {
+                "method.response.header.Content-Type": "'application/xml'",
+              },
+              "ResponseTemplates": {
+                "application/xml": "#set($inputRoot = $input.path('$'))$inputRoot.body",
+              },
+              "StatusCode": "200",
+            },
+          ],
+          "RequestTemplates": {
+            "application/json": "{"duration": "$input.params('duration')"}",
+          },
+          "Type": "AWS",
+          "Uri": {
+            "Fn::Join": [
+              "",
+              [
+                "arn:",
+                {
+                  "Ref": "AWS::Partition",
+                },
+                ":apigateway:",
+                {
+                  "Ref": "AWS::Region",
+                },
+                ":lambda:path/2015-03-31/functions/",
+                {
+                  "Fn::GetAtt": [
+                    "AdDecisionServerScheduleSCTEB15B2BD0",
+                    "Arn",
+                  ],
+                },
+                "/invocations",
+              ],
+            ],
+          },
+        },
+        "MethodResponses": [
+          {
+            "ResponseParameters": {
+              "method.response.header.Content-Type": true,
+            },
+            "StatusCode": "200",
+          },
+        ],
+        "RequestParameters": {
+          "method.request.querystring.duration": true,
+        },
+        "ResourceId": {
+          "Ref": "AdDecisionServerVASTEndpointvast753ADAA5",
+        },
+        "RestApiId": {
+          "Ref": "AdDecisionServerVASTEndpoint304968C7",
+        },
+      },
+      "Type": "AWS::ApiGateway::Method",
+    },
+    "AdDecisionServerVASTEndpointvastGETApiPermissionTesttestAdDecisionServerVASTEndpoint8A3B887DGETvastB0EF4B75": {
+      "Properties": {
+        "Action": "lambda:InvokeFunction",
+        "FunctionName": {
+          "Fn::GetAtt": [
+            "AdDecisionServerScheduleSCTEB15B2BD0",
+            "Arn",
+          ],
+        },
+        "Principal": "apigateway.amazonaws.com",
+        "SourceArn": {
+          "Fn::Join": [
+            "",
+            [
+              "arn:",
+              {
+                "Ref": "AWS::Partition",
+              },
+              ":execute-api:",
+              {
+                "Ref": "AWS::Region",
+              },
+              ":",
+              {
+                "Ref": "AWS::AccountId",
+              },
+              ":",
+              {
+                "Ref": "AdDecisionServerVASTEndpoint304968C7",
+              },
+              "/test-invoke-stage/GET/vast",
+            ],
+          ],
+        },
+      },
+      "Type": "AWS::Lambda::Permission",
+    },
+    "AdDecisionServerVASTEndpointvastGETApiPermissiontestAdDecisionServerVASTEndpoint8A3B887DGETvast14FB8D83": {
+      "Properties": {
+        "Action": "lambda:InvokeFunction",
+        "FunctionName": {
+          "Fn::GetAtt": [
+            "AdDecisionServerScheduleSCTEB15B2BD0",
+            "Arn",
+          ],
+        },
+        "Principal": "apigateway.amazonaws.com",
+        "SourceArn": {
+          "Fn::Join": [
+            "",
+            [
+              "arn:",
+              {
+                "Ref": "AWS::Partition",
+              },
+              ":execute-api:",
+              {
+                "Ref": "AWS::Region",
+              },
+              ":",
+              {
+                "Ref": "AWS::AccountId",
+              },
+              ":",
+              {
+                "Ref": "AdDecisionServerVASTEndpoint304968C7",
+              },
+              "/",
+              {
+                "Ref": "AdDecisionServerVASTEndpointDeploymentStageprod0E51DA90",
+              },
+              "/GET/vast",
+            ],
+          ],
+        },
+      },
+      "Type": "AWS::Lambda::Permission",
+    },
+    "AdDecisionServerrole07B3EFD3": {
+      "Properties": {
+        "AssumeRolePolicyDocument": {
+          "Statement": [
+            {
+              "Action": "sts:AssumeRole",
+              "Effect": "Allow",
+              "Principal": {
+                "Service": "apigateway.amazonaws.com",
+              },
+            },
+          ],
+          "Version": "2012-10-17",
+        },
+        "ManagedPolicyArns": [
+          {
+            "Fn::Join": [
+              "",
+              [
+                "arn:",
+                {
+                  "Ref": "AWS::Partition",
+                },
+                ":iam::aws:policy/CloudWatchLogsFullAccess",
+              ],
+            ],
+          },
+        ],
+      },
+      "Type": "AWS::IAM::Role",
+    },
+    "AdDecisionServerroleDefaultPolicy69A6098E": {
+      "Properties": {
+        "PolicyDocument": {
+          "Statement": [
+            {
+              "Action": [
+                "logs:CreateLogStream",
+                "logs:PutLogEvents",
+              ],
+              "Effect": "Allow",
+              "Resource": {
+                "Fn::GetAtt": [
+                  "AdDecisionServerApiGatewayLogGroup29E15A43",
+                  "Arn",
+                ],
+              },
+            },
+          ],
+          "Version": "2012-10-17",
+        },
+        "PolicyName": "AdDecisionServerroleDefaultPolicy69A6098E",
+        "Roles": [
+          {
+            "Ref": "AdDecisionServerrole07B3EFD3",
+          },
+        ],
+      },
+      "Type": "AWS::IAM::Policy",
+    },
+    "CustomCDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C1024MiBB049752D": {
+      "DependsOn": [
+        "CustomCDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C1024MiBServiceRoleDefaultPolicy0801355D",
+        "CustomCDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C1024MiBServiceRole739949D8",
+      ],
+      "Properties": {
+        "Code": {
+          "S3Bucket": {
+            "Fn::Sub": "cdk-hnb659fds-assets-\${AWS::AccountId}-\${AWS::Region}",
+          },
+          "S3Key": "0158f40002a8c211635388a87874fd4dcc3d68f525fe08a0fe0f014069ae539c.zip",
+        },
+        "Environment": {
+          "Variables": {
+            "AWS_CA_BUNDLE": "/etc/pki/ca-trust/extracted/pem/tls-ca-bundle.pem",
+          },
+        },
+        "Handler": "index.handler",
+        "Layers": [
+          {
+            "Ref": "FilePublisherDeployFilesAwsCliLayerEC320A13",
+          },
+        ],
+        "MemorySize": 1024,
+        "Role": {
+          "Fn::GetAtt": [
+            "CustomCDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C1024MiBServiceRole739949D8",
+            "Arn",
+          ],
+        },
+        "Runtime": "python3.9",
+        "Timeout": 900,
+      },
+      "Type": "AWS::Lambda::Function",
+    },
+    "CustomCDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C1024MiBServiceRole739949D8": {
+      "Properties": {
+        "AssumeRolePolicyDocument": {
+          "Statement": [
+            {
+              "Action": "sts:AssumeRole",
+              "Effect": "Allow",
+              "Principal": {
+                "Service": "lambda.amazonaws.com",
+              },
+            },
+          ],
+          "Version": "2012-10-17",
+        },
+        "ManagedPolicyArns": [
+          {
+            "Fn::Join": [
+              "",
+              [
+                "arn:",
+                {
+                  "Ref": "AWS::Partition",
+                },
+                ":iam::aws:policy/service-role/AWSLambdaBasicExecutionRole",
+              ],
+            ],
+          },
+        ],
+      },
+      "Type": "AWS::IAM::Role",
+    },
+    "CustomCDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C1024MiBServiceRoleDefaultPolicy0801355D": {
+      "Properties": {
+        "PolicyDocument": {
+          "Statement": [
+            {
+              "Action": [
+                "s3:GetObject*",
+                "s3:GetBucket*",
+                "s3:List*",
+              ],
+              "Effect": "Allow",
+              "Resource": [
+                {
+                  "Fn::Join": [
+                    "",
+                    [
+                      "arn:",
+                      {
+                        "Ref": "AWS::Partition",
+                      },
+                      ":s3:::",
+                      {
+                        "Fn::Sub": "cdk-hnb659fds-assets-\${AWS::AccountId}-\${AWS::Region}",
+                      },
+                    ],
+                  ],
+                },
+                {
+                  "Fn::Join": [
+                    "",
+                    [
+                      "arn:",
+                      {
+                        "Ref": "AWS::Partition",
+                      },
+                      ":s3:::",
+                      {
+                        "Fn::Sub": "cdk-hnb659fds-assets-\${AWS::AccountId}-\${AWS::Region}",
+                      },
+                      "/*",
+                    ],
+                  ],
+                },
+              ],
+            },
+            {
+              "Action": [
+                "s3:GetObject*",
+                "s3:GetBucket*",
+                "s3:List*",
+                "s3:DeleteObject*",
+                "s3:PutObject",
+                "s3:PutObjectLegalHold",
+                "s3:PutObjectRetention",
+                "s3:PutObjectTagging",
+                "s3:PutObjectVersionTagging",
+                "s3:Abort*",
+              ],
+              "Effect": "Allow",
+              "Resource": [
+                {
+                  "Fn::GetAtt": [
+                    "FilePublishere8cdef601cd34f7fa9dae460b8c61b55D393BF04",
+                    "Arn",
+                  ],
+                },
+                {
+                  "Fn::Join": [
+                    "",
+                    [
+                      {
+                        "Fn::GetAtt": [
+                          "FilePublishere8cdef601cd34f7fa9dae460b8c61b55D393BF04",
+                          "Arn",
+                        ],
+                      },
+                      "/*",
+                    ],
+                  ],
+                },
+              ],
+            },
+          ],
+          "Version": "2012-10-17",
+        },
+        "PolicyName": "CustomCDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C1024MiBServiceRoleDefaultPolicy0801355D",
+        "Roles": [
+          {
+            "Ref": "CustomCDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C1024MiBServiceRole739949D8",
+          },
+        ],
+      },
+      "Type": "AWS::IAM::Policy",
+    },
+    "CustomS3AutoDeleteObjectsCustomResourceProviderHandler9D90184F": {
+      "DependsOn": [
+        "CustomS3AutoDeleteObjectsCustomResourceProviderRole3B1BD092",
+      ],
+      "Properties": {
+        "Code": {
+          "S3Bucket": {
+            "Fn::Sub": "cdk-hnb659fds-assets-\${AWS::AccountId}-\${AWS::Region}",
+          },
+          "S3Key": "faa95a81ae7d7373f3e1f242268f904eb748d8d0fdd306e8a6fe515a1905a7d6.zip",
+        },
+        "Description": {
+          "Fn::Join": [
+            "",
+            [
+              "Lambda function for auto-deleting objects in ",
+              {
+                "Ref": "FilePublishere8cdef601cd34f7fa9dae460b8c61b55D393BF04",
+              },
+              " S3 bucket.",
+            ],
+          ],
+        },
+        "Handler": "index.handler",
+        "MemorySize": 128,
+        "Role": {
+          "Fn::GetAtt": [
+            "CustomS3AutoDeleteObjectsCustomResourceProviderRole3B1BD092",
+            "Arn",
+          ],
+        },
+        "Runtime": {
+          "Fn::FindInMap": [
+            "LatestNodeRuntimeMap",
+            {
+              "Ref": "AWS::Region",
+            },
+            "value",
+          ],
+        },
+        "Timeout": 900,
+      },
+      "Type": "AWS::Lambda::Function",
+    },
+    "CustomS3AutoDeleteObjectsCustomResourceProviderRole3B1BD092": {
+      "Properties": {
+        "AssumeRolePolicyDocument": {
+          "Statement": [
+            {
+              "Action": "sts:AssumeRole",
+              "Effect": "Allow",
+              "Principal": {
+                "Service": "lambda.amazonaws.com",
+              },
+            },
+          ],
+          "Version": "2012-10-17",
+        },
+        "ManagedPolicyArns": [
+          {
+            "Fn::Sub": "arn:\${AWS::Partition}:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole",
+          },
+        ],
+      },
+      "Type": "AWS::IAM::Role",
+    },
+    "FilePublisherDeployFilesAwsCliLayerEC320A13": {
+      "Properties": {
+        "Content": {
+          "S3Bucket": {
+            "Fn::Sub": "cdk-hnb659fds-assets-\${AWS::AccountId}-\${AWS::Region}",
+          },
+          "S3Key": "3322b7049fb0ed2b7cbb644a2ada8d1116ff80c32dca89e6ada846b5de26f961.zip",
+        },
+        "Description": "/opt/awscli/aws",
+      },
+      "Type": "AWS::Lambda::LayerVersion",
+    },
+    "FilePublisherDeployFilesCustomResource1024MiBA8F9BCD4": {
+      "DeletionPolicy": "Delete",
+      "Properties": {
+        "DestinationBucketName": {
+          "Ref": "FilePublishere8cdef601cd34f7fa9dae460b8c61b55D393BF04",
+        },
+        "Prune": true,
+        "ServiceToken": {
+          "Fn::GetAtt": [
+            "CustomCDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C1024MiBB049752D",
+            "Arn",
+          ],
+        },
+        "SourceBucketNames": [
+          {
+            "Fn::Sub": "cdk-hnb659fds-assets-\${AWS::AccountId}-\${AWS::Region}",
+          },
+        ],
+        "SourceObjectKeys": [
+          "6113464aaa711910d5f51a64f37bc02e64b1d3f83181fa0d63728568ea0fb909.zip",
+        ],
+      },
+      "Type": "Custom::CDKBucketDeployment",
+      "UpdateReplacePolicy": "Delete",
+    },
+    "FilePublisherDistribution877DC374": {
+      "Properties": {
+        "DistributionConfig": {
+          "DefaultCacheBehavior": {
+            "AllowedMethods": [
+              "GET",
+              "HEAD",
+              "OPTIONS",
+            ],
+            "CachePolicyId": "658327ea-f89d-4fab-a63d-7e88639e58f6",
+            "CachedMethods": [
+              "GET",
+              "HEAD",
+              "OPTIONS",
+            ],
+            "Compress": true,
+            "TargetOriginId": "testFilePublisherDistributionOrigin15DC92E3A",
+            "ViewerProtocolPolicy": "allow-all",
+          },
+          "Enabled": true,
+          "HttpVersion": "http2",
+          "IPV6Enabled": true,
+          "Origins": [
+            {
+              "DomainName": {
+                "Fn::GetAtt": [
+                  "FilePublishere8cdef601cd34f7fa9dae460b8c61b55D393BF04",
+                  "RegionalDomainName",
+                ],
+              },
+              "Id": "testFilePublisherDistributionOrigin15DC92E3A",
+              "S3OriginConfig": {
+                "OriginAccessIdentity": {
+                  "Fn::Join": [
+                    "",
+                    [
+                      "origin-access-identity/cloudfront/",
+                      {
+                        "Ref": "FilePublisherOAI87FC8EA5",
+                      },
+                    ],
+                  ],
+                },
+              },
+            },
+          ],
+        },
+      },
+      "Type": "AWS::CloudFront::Distribution",
+    },
+    "FilePublisherOAI87FC8EA5": {
+      "Properties": {
+        "CloudFrontOriginAccessIdentityConfig": {
+          "Comment": "OAI for CloudFront to access private S3 bucket",
+        },
+      },
+      "Type": "AWS::CloudFront::CloudFrontOriginAccessIdentity",
+    },
+    "FilePublishere8cdef601cd34f7fa9dae460b8c61b55AutoDeleteObjectsCustomResource15B18E91": {
+      "DeletionPolicy": "Delete",
+      "DependsOn": [
+        "FilePublishere8cdef601cd34f7fa9dae460b8c61b55PolicyADE095BA",
+      ],
+      "Properties": {
+        "BucketName": {
+          "Ref": "FilePublishere8cdef601cd34f7fa9dae460b8c61b55D393BF04",
+        },
+        "ServiceToken": {
+          "Fn::GetAtt": [
+            "CustomS3AutoDeleteObjectsCustomResourceProviderHandler9D90184F",
+            "Arn",
+          ],
+        },
+      },
+      "Type": "Custom::S3AutoDeleteObjects",
+      "UpdateReplacePolicy": "Delete",
+    },
+    "FilePublishere8cdef601cd34f7fa9dae460b8c61b55D393BF04": {
+      "DeletionPolicy": "Delete",
+      "Properties": {
+        "BucketName": "e8cdef60-1cd3-4f7f-a9da-e460b8c61b55",
+        "Tags": [
+          {
+            "Key": "aws-cdk:auto-delete-objects",
+            "Value": "true",
+          },
+          {
+            "Key": "aws-cdk:cr-owned:fc2f7067",
+            "Value": "true",
+          },
+        ],
+      },
+      "Type": "AWS::S3::Bucket",
+      "UpdateReplacePolicy": "Delete",
+    },
+    "FilePublishere8cdef601cd34f7fa9dae460b8c61b55PolicyADE095BA": {
+      "Properties": {
+        "Bucket": {
+          "Ref": "FilePublishere8cdef601cd34f7fa9dae460b8c61b55D393BF04",
+        },
+        "PolicyDocument": {
+          "Statement": [
+            {
+              "Action": [
+                "s3:PutBucketPolicy",
+                "s3:GetBucket*",
+                "s3:List*",
+                "s3:DeleteObject*",
+              ],
+              "Effect": "Allow",
+              "Principal": {
+                "AWS": {
+                  "Fn::GetAtt": [
+                    "CustomS3AutoDeleteObjectsCustomResourceProviderRole3B1BD092",
+                    "Arn",
+                  ],
+                },
+              },
+              "Resource": [
+                {
+                  "Fn::GetAtt": [
+                    "FilePublishere8cdef601cd34f7fa9dae460b8c61b55D393BF04",
+                    "Arn",
+                  ],
+                },
+                {
+                  "Fn::Join": [
+                    "",
+                    [
+                      {
+                        "Fn::GetAtt": [
+                          "FilePublishere8cdef601cd34f7fa9dae460b8c61b55D393BF04",
+                          "Arn",
+                        ],
+                      },
+                      "/*",
+                    ],
+                  ],
+                },
+              ],
+            },
+            {
+              "Action": "s3:GetObject",
+              "Effect": "Allow",
+              "Principal": {
+                "CanonicalUser": {
+                  "Fn::GetAtt": [
+                    "FilePublisherOAI87FC8EA5",
+                    "S3CanonicalUserId",
+                  ],
+                },
+              },
+              "Resource": {
+                "Fn::Join": [
+                  "",
+                  [
+                    {
+                      "Fn::GetAtt": [
+                        "FilePublishere8cdef601cd34f7fa9dae460b8c61b55D393BF04",
+                        "Arn",
+                      ],
+                    },
+                    "/*",
+                  ],
+                ],
+              },
+            },
+          ],
+          "Version": "2012-10-17",
+        },
+      },
+      "Type": "AWS::S3::BucketPolicy",
+    },
+    "LiveChannelFromMp4MediaLiveCfnChannelChannel2738FC17": {
+      "Properties": {
+        "ChannelClass": "SINGLE_PIPELINE",
+        "Destinations": [
+          {
+            "Id": "MediaPackageV1",
+            "MediaPackageSettings": [
+              {
+                "ChannelId": {
+                  "Ref": "LiveChannelFromMp4MediaPackageV1MediaPackageV1Channel8413A6B2",
+                },
+              },
+            ],
+          },
+        ],
+        "EncoderSettings": {
+          "AudioDescriptions": [
+            {
+              "AudioSelectorName": "default",
+              "AudioTypeControl": "FOLLOW_INPUT",
+              "CodecSettings": {
+                "AacSettings": {
+                  "Bitrate": 96000,
+                  "CodingMode": "CODING_MODE_2_0",
+                  "SampleRate": 48000,
+                },
+              },
+              "LanguageCodeControl": "FOLLOW_INPUT",
+              "Name": "_96Kbps_AAC",
+            },
+          ],
+          "AvailBlanking": {
+            "State": "ENABLED",
+          },
+          "OutputGroups": [
+            {
+              "Name": "outputGroup_0",
+              "OutputGroupSettings": {
+                "MediaPackageGroupSettings": {
+                  "Destination": {
+                    "DestinationRefId": "MediaPackageV1",
+                  },
+                },
+              },
+              "Outputs": [
+                {
+                  "OutputName": "outputGroup_0_640x360",
+                  "OutputSettings": {
+                    "MediaPackageOutputSettings": {},
+                  },
+                  "VideoDescriptionName": "_640x360",
+                },
+                {
+                  "OutputName": "outputGroup_0_960x540",
+                  "OutputSettings": {
+                    "MediaPackageOutputSettings": {},
+                  },
+                  "VideoDescriptionName": "_960x540",
+                },
+                {
+                  "OutputName": "outputGroup_0_1280x720",
+                  "OutputSettings": {
+                    "MediaPackageOutputSettings": {},
+                  },
+                  "VideoDescriptionName": "_1280x720",
+                },
+                {
+                  "AudioDescriptionNames": [
+                    "_96Kbps_AAC",
+                  ],
+                  "OutputName": "outputGroup_0_96Kbps_AAC",
+                  "OutputSettings": {
+                    "MediaPackageOutputSettings": {},
+                  },
+                },
+              ],
+            },
+          ],
+          "TimecodeConfig": {
+            "Source": "SYSTEMCLOCK",
+          },
+          "VideoDescriptions": [
+            {
+              "CodecSettings": {
+                "H264Settings": {
+                  "FramerateControl": "SPECIFIED",
+                  "FramerateDenominator": 1001,
+                  "FramerateNumerator": 30000,
+                  "GopSize": 3,
+                  "GopSizeUnits": "SECONDS",
+                  "MaxBitrate": 1000000,
+                  "ParControl": "SPECIFIED",
+                  "ParDenominator": 1,
+                  "ParNumerator": 1,
+                  "RateControlMode": "QVBR",
+                  "ScanType": "PROGRESSIVE",
+                  "TimecodeBurninSettings": {
+                    "FontSize": "SMALL_16",
+                    "Position": "TOP_CENTER",
+                    "Prefix": "Ch1_640x360",
+                  },
+                  "TimecodeInsertion": "PIC_TIMING_SEI",
+                },
+              },
+              "Height": 360,
+              "Name": "_640x360",
+              "Width": 640,
+            },
+            {
+              "CodecSettings": {
+                "H264Settings": {
+                  "FramerateControl": "SPECIFIED",
+                  "FramerateDenominator": 1001,
+                  "FramerateNumerator": 30000,
+                  "GopSize": 3,
+                  "GopSizeUnits": "SECONDS",
+                  "MaxBitrate": 2000000,
+                  "ParControl": "SPECIFIED",
+                  "ParDenominator": 1,
+                  "ParNumerator": 1,
+                  "RateControlMode": "QVBR",
+                  "ScanType": "PROGRESSIVE",
+                  "TimecodeBurninSettings": {
+                    "FontSize": "SMALL_16",
+                    "Position": "TOP_CENTER",
+                    "Prefix": "Ch1_960x540",
+                  },
+                  "TimecodeInsertion": "PIC_TIMING_SEI",
+                },
+              },
+              "Height": 540,
+              "Name": "_960x540",
+              "Width": 960,
+            },
+            {
+              "CodecSettings": {
+                "H264Settings": {
+                  "FramerateControl": "SPECIFIED",
+                  "FramerateDenominator": 1001,
+                  "FramerateNumerator": 30000,
+                  "GopSize": 3,
+                  "GopSizeUnits": "SECONDS",
+                  "MaxBitrate": 3000000,
+                  "ParControl": "SPECIFIED",
+                  "ParDenominator": 1,
+                  "ParNumerator": 1,
+                  "RateControlMode": "QVBR",
+                  "ScanType": "PROGRESSIVE",
+                  "TimecodeBurninSettings": {
+                    "FontSize": "SMALL_16",
+                    "Position": "TOP_CENTER",
+                    "Prefix": "Ch1_1280x720",
+                  },
+                  "TimecodeInsertion": "PIC_TIMING_SEI",
+                },
+              },
+              "Height": 720,
+              "Name": "_1280x720",
+              "Width": 1280,
+            },
+          ],
+        },
+        "InputAttachments": [
+          {
+            "InputAttachmentName": "60ec7075-816b-4e56-9a39-a3e234b45f7e",
+            "InputId": {
+              "Ref": "LiveChannelFromMp4MediaLiveCfnInput0330A3853",
+            },
+            "InputSettings": {
+              "SourceEndBehavior": "LOOP",
+            },
+          },
+        ],
+        "Name": "0b53c342-0eae-4547-8aca-f0032892720f-Channel",
+        "RoleArn": {
+          "Fn::GetAtt": [
+            "LiveChannelFromMp4MediaLiveIamRoleChannel570F95D7",
+            "Arn",
+          ],
+        },
+      },
+      "Type": "AWS::MediaLive::Channel",
+    },
+    "LiveChannelFromMp4MediaLiveCfnInput0330A3853": {
+      "Properties": {
+        "Name": "60ec7075-816b-4e56-9a39-a3e234b45f7e",
+        "Sources": [
+          {
+            "Url": {
+              "Fn::Join": [
+                "",
+                [
+                  "https://",
+                  {
+                    "Fn::GetAtt": [
+                      "FilePublisherDistribution877DC374",
+                      "DomainName",
+                    ],
+                  },
+                  "/dog.mp4",
+                ],
+              ],
+            },
+          },
+        ],
+        "Type": "MP4_FILE",
+      },
+      "Type": "AWS::MediaLive::Input",
+    },
+    "LiveChannelFromMp4MediaLiveIamRoleChannel570F95D7": {
+      "Properties": {
+        "AssumeRolePolicyDocument": {
+          "Statement": [
+            {
+              "Action": "sts:AssumeRole",
+              "Effect": "Allow",
+              "Principal": {
+                "Service": "medialive.amazonaws.com",
+              },
+            },
+          ],
+          "Version": "2012-10-17",
+        },
+        "Policies": [
+          {
+            "PolicyDocument": {
+              "Statement": [
+                {
+                  "Action": [
+                    "s3:ListBucket",
+                    "s3:GetObject",
+                    "mediapackage:DescribeChannel",
+                    "mediapackagev2:PutObject",
+                  ],
+                  "Effect": "Allow",
+                  "Resource": "*",
+                },
+              ],
+              "Version": "2012-10-17",
+            },
+            "PolicyName": "policy",
+          },
+        ],
+      },
+      "Type": "AWS::IAM::Role",
+    },
+    "LiveChannelFromMp4MediaPackageV1MediaPackageV1Channel8413A6B2": {
+      "Properties": {
+        "Description": "MediaPackage channel for testing",
+        "Id": "2e926284-2da9-45ee-8d52-0db26bc4dab8",
+      },
+      "Type": "AWS::MediaPackage::Channel",
+    },
+    "LiveChannelFromMp4MediaPackageV1MediaPackageV1CmafEndpoint55053296": {
+      "Properties": {
+        "ChannelId": {
+          "Ref": "LiveChannelFromMp4MediaPackageV1MediaPackageV1Channel8413A6B2",
+        },
+        "CmafPackage": {
+          "HlsManifests": [
+            {
+              "AdMarkers": "DATERANGE",
+              "AdTriggers": [
+                "DISTRIBUTOR_ADVERTISEMENT",
+                "DISTRIBUTOR_OVERLAY_PLACEMENT_OPPORTUNITY",
+                "DISTRIBUTOR_PLACEMENT_OPPORTUNITY",
+                "PROVIDER_ADVERTISEMENT",
+                "PROVIDER_OVERLAY_PLACEMENT_OPPORTUNITY",
+                "PROVIDER_PLACEMENT_OPPORTUNITY",
+                "SPLICE_INSERT",
+              ],
+              "Id": "1",
+              "PlaylistWindowSeconds": 60,
+              "ProgramDateTimeIntervalSeconds": 1,
+            },
+          ],
+          "SegmentDurationSeconds": 6,
+        },
+        "Description": "MediaPackage CMAF endpoint for testing",
+        "Id": "b0993c92-6ccd-4d2f-9d43-a30a6c9ac6cf",
+        "StartoverWindowSeconds": 300,
+      },
+      "Type": "AWS::MediaPackage::OriginEndpoint",
+    },
+    "LiveChannelFromMp4MediaPackageV1MediaPackageV1DashEndpointBA61A791": {
+      "Properties": {
+        "ChannelId": {
+          "Ref": "LiveChannelFromMp4MediaPackageV1MediaPackageV1Channel8413A6B2",
+        },
+        "DashPackage": {
+          "AdTriggers": [
+            "DISTRIBUTOR_ADVERTISEMENT",
+            "DISTRIBUTOR_OVERLAY_PLACEMENT_OPPORTUNITY",
+            "DISTRIBUTOR_PLACEMENT_OPPORTUNITY",
+            "PROVIDER_ADVERTISEMENT",
+            "PROVIDER_OVERLAY_PLACEMENT_OPPORTUNITY",
+            "PROVIDER_PLACEMENT_OPPORTUNITY",
+            "SPLICE_INSERT",
+          ],
+          "ManifestWindowSeconds": 60,
+          "PeriodTriggers": [
+            "ADS",
+          ],
+          "SegmentDurationSeconds": 6,
+        },
+        "Description": "MediaPackage DASH endpoint for testing",
+        "Id": "1b43c670-d88d-4f52-b2ff-b063aa956488",
+        "StartoverWindowSeconds": 300,
+      },
+      "Type": "AWS::MediaPackage::OriginEndpoint",
+    },
+    "LiveChannelFromMp4MediaPackageV1MediaPackageV1HlsEndpoint735161B2": {
+      "Properties": {
+        "ChannelId": {
+          "Ref": "LiveChannelFromMp4MediaPackageV1MediaPackageV1Channel8413A6B2",
+        },
+        "Description": "MediaPackage HLS endpoint for testing",
+        "HlsPackage": {
+          "AdMarkers": "DATERANGE",
+          "AdTriggers": [
+            "DISTRIBUTOR_ADVERTISEMENT",
+            "DISTRIBUTOR_OVERLAY_PLACEMENT_OPPORTUNITY",
+            "DISTRIBUTOR_PLACEMENT_OPPORTUNITY",
+            "PROVIDER_ADVERTISEMENT",
+            "PROVIDER_OVERLAY_PLACEMENT_OPPORTUNITY",
+            "PROVIDER_PLACEMENT_OPPORTUNITY",
+            "SPLICE_INSERT",
+          ],
+          "PlaylistWindowSeconds": 60,
+          "ProgramDateTimeIntervalSeconds": 1,
+          "SegmentDurationSeconds": 6,
+          "UseAudioRenditionGroup": false,
+        },
+        "Id": "fd2a3377-4c5b-4f57-9ad4-2e0d20b55c51",
+        "StartoverWindowSeconds": 300,
+      },
+      "Type": "AWS::MediaPackage::OriginEndpoint",
+    },
+    "LiveChannelFromMp4MediaPackageV1MediaPackageV1MssEndpoint7AC0060D": {
+      "Properties": {
+        "ChannelId": {
+          "Ref": "LiveChannelFromMp4MediaPackageV1MediaPackageV1Channel8413A6B2",
+        },
+        "Description": "MediaPackage MSS endpoint for testing",
+        "Id": "5dca251c-02c8-45e8-a475-d5aab98504fa",
+        "MssPackage": {
+          "ManifestWindowSeconds": 60,
+          "SegmentDurationSeconds": 6,
+        },
+        "StartoverWindowSeconds": 300,
+      },
+      "Type": "AWS::MediaPackage::OriginEndpoint",
+    },
+    "LiveChannelFromMp4StartMediaLiveChannel50E51653": {
+      "DeletionPolicy": "Delete",
+      "DependsOn": [
+        "LiveChannelFromMp4StartMediaLiveChannelCustomResourcePolicy0208E3D5",
+      ],
+      "Properties": {
+        "Create": {
+          "Fn::Join": [
+            "",
+            [
+              "{"service":"MediaLive","action":"StartChannel","parameters":{"ChannelId":"",
+              {
+                "Ref": "LiveChannelFromMp4MediaLiveCfnChannelChannel2738FC17",
+              },
+              ""},"physicalResourceId":{"id":"b4b5c950-74df-419a-905e-7d3d31434521"},"ignoreErrorCodesMatching":"*","outputPaths":["Id","Arn"]}",
+            ],
+          ],
+        },
+        "Delete": {
+          "Fn::Join": [
+            "",
+            [
+              "{"service":"MediaLive","action":"StopChannel","parameters":{"ChannelId":"",
+              {
+                "Ref": "LiveChannelFromMp4MediaLiveCfnChannelChannel2738FC17",
+              },
+              ""},"physicalResourceId":{"id":"e923cd5e-4d33-43e5-9f9a-8a887ab5833f"},"ignoreErrorCodesMatching":"*","outputPaths":["Id","Arn"]}",
+            ],
+          ],
+        },
+        "InstallLatestAwsSdk": true,
+        "ServiceToken": {
+          "Fn::GetAtt": [
+            "AWS679f53fac002430cb0da5b7982bd22872D164C4C",
+            "Arn",
+          ],
+        },
+      },
+      "Type": "Custom::AWS",
+      "UpdateReplacePolicy": "Delete",
+    },
+    "LiveChannelFromMp4StartMediaLiveChannelCustomResourcePolicy0208E3D5": {
+      "Properties": {
+        "PolicyDocument": {
+          "Statement": [
+            {
+              "Action": "medialive:StartChannel",
+              "Effect": "Allow",
+              "Resource": "*",
+            },
+            {
+              "Action": "medialive:StopChannel",
+              "Effect": "Allow",
+              "Resource": "*",
+            },
+          ],
+          "Version": "2012-10-17",
+        },
+        "PolicyName": "LiveChannelFromMp4StartMediaLiveChannelCustomResourcePolicy0208E3D5",
+        "Roles": [
+          {
+            "Ref": "AWS679f53fac002430cb0da5b7982bd2287ServiceRoleC1EA0FF2",
+          },
+        ],
+      },
+      "Type": "AWS::IAM::Policy",
+    },
+    "LogRetentionaae0aa3c5b4d4f87b02d85b201efdd8aFD4BFC8A": {
+      "DependsOn": [
+        "LogRetentionaae0aa3c5b4d4f87b02d85b201efdd8aServiceRoleDefaultPolicyADDA7DEB",
+        "LogRetentionaae0aa3c5b4d4f87b02d85b201efdd8aServiceRole9741ECFB",
+      ],
+      "Properties": {
+        "Code": {
+          "S3Bucket": {
+            "Fn::Sub": "cdk-hnb659fds-assets-\${AWS::AccountId}-\${AWS::Region}",
+          },
+          "S3Key": "4e26bf2d0a26f2097fb2b261f22bb51e3f6b4b52635777b1e54edbd8e2d58c35.zip",
+        },
+        "Handler": "index.handler",
+        "Role": {
+          "Fn::GetAtt": [
+            "LogRetentionaae0aa3c5b4d4f87b02d85b201efdd8aServiceRole9741ECFB",
+            "Arn",
+          ],
+        },
+        "Runtime": {
+          "Fn::FindInMap": [
+            "LatestNodeRuntimeMap",
+            {
+              "Ref": "AWS::Region",
+            },
+            "value",
+          ],
+        },
+        "Timeout": 900,
+      },
+      "Type": "AWS::Lambda::Function",
+    },
+    "LogRetentionaae0aa3c5b4d4f87b02d85b201efdd8aServiceRole9741ECFB": {
+      "Properties": {
+        "AssumeRolePolicyDocument": {
+          "Statement": [
+            {
+              "Action": "sts:AssumeRole",
+              "Effect": "Allow",
+              "Principal": {
+                "Service": "lambda.amazonaws.com",
+              },
+            },
+          ],
+          "Version": "2012-10-17",
+        },
+        "ManagedPolicyArns": [
+          {
+            "Fn::Join": [
+              "",
+              [
+                "arn:",
+                {
+                  "Ref": "AWS::Partition",
+                },
+                ":iam::aws:policy/service-role/AWSLambdaBasicExecutionRole",
+              ],
+            ],
+          },
+        ],
+      },
+      "Type": "AWS::IAM::Role",
+    },
+    "LogRetentionaae0aa3c5b4d4f87b02d85b201efdd8aServiceRoleDefaultPolicyADDA7DEB": {
+      "Properties": {
+        "PolicyDocument": {
+          "Statement": [
+            {
+              "Action": [
+                "logs:PutRetentionPolicy",
+                "logs:DeleteRetentionPolicy",
+              ],
+              "Effect": "Allow",
+              "Resource": "*",
+            },
+          ],
+          "Version": "2012-10-17",
+        },
+        "PolicyName": "LogRetentionaae0aa3c5b4d4f87b02d85b201efdd8aServiceRoleDefaultPolicyADDA7DEB",
+        "Roles": [
+          {
+            "Ref": "LogRetentionaae0aa3c5b4d4f87b02d85b201efdd8aServiceRole9741ECFB",
+          },
+        ],
+      },
+      "Type": "AWS::IAM::Policy",
+    },
+    "MediaTailorWithCloudFrontMediaTailorCfnPlaybackConfiguration77F4E5D7": {
+      "Properties": {
+        "AdDecisionServerUrl": {
+          "Fn::Join": [
+            "",
+            [
+              "https://",
+              {
+                "Ref": "AdDecisionServerVASTEndpoint304968C7",
+              },
+              ".execute-api.",
+              {
+                "Ref": "AWS::Region",
+              },
+              ".",
+              {
+                "Ref": "AWS::URLSuffix",
+              },
+              "/",
+              {
+                "Ref": "AdDecisionServerVASTEndpointDeploymentStageprod0E51DA90",
+              },
+              "/vast?duration=[session.avail_duration_secs]&session=[session.uuid]",
+            ],
+          ],
+        },
+        "LivePreRollConfiguration": {},
+        "Name": "89f21bd7-bbb0-4a9b-bd81-e7cb6f9ad48b",
+        "SlateAdUrl": {
+          "Fn::Join": [
+            "",
+            [
+              "https://",
+              {
+                "Fn::GetAtt": [
+                  "FilePublisherDistribution877DC374",
+                  "DomainName",
+                ],
+              },
+              "/slate-1sec.mp4",
+            ],
+          ],
+        },
+        "VideoContentSourceUrl": {
+          "Fn::Join": [
+            "",
+            [
+              "https://",
+              {
+                "Fn::Select": [
+                  0,
+                  {
+                    "Fn::Split": [
+                      "/",
+                      {
+                        "Fn::Select": [
+                          1,
+                          {
+                            "Fn::Split": [
+                              "//",
+                              {
+                                "Fn::GetAtt": [
+                                  "LiveChannelFromMp4MediaPackageV1MediaPackageV1HlsEndpoint735161B2",
+                                  "Url",
+                                ],
+                              },
+                            ],
+                          },
+                        ],
+                      },
+                    ],
+                  },
+                ],
+              },
+              "/out/v1/",
+            ],
+          ],
+        },
+      },
+      "Type": "AWS::MediaTailor::PlaybackConfiguration",
+    },
+    "PrefetchSchedulerEventBridgeScheduleInvokeFunctionEveryXMinutesBA7E514F": {
+      "Properties": {
+        "ScheduleExpression": "cron(34 7 7 9 ? 2024)",
+        "State": "ENABLED",
+        "Targets": [
+          {
+            "Arn": {
+              "Ref": "PrefetchSchedulerStateMachine6BEF6AF5",
+            },
+            "Id": "Target0",
+            "RoleArn": {
+              "Fn::GetAtt": [
+                "PrefetchSchedulerStateMachineEventsRole1CBF2BD7",
+                "Arn",
+              ],
+            },
+          },
+        ],
+      },
+      "Type": "AWS::Events::Rule",
+    },
+    "PrefetchSchedulerNodejsFunctionPrefetchLambdaFunction2E1277ED": {
+      "DependsOn": [
+        "PrefetchSchedulerNodejsFunctionPrefetchLambdaFunctionServiceRoleDefaultPolicyF65A949C",
+        "PrefetchSchedulerNodejsFunctionPrefetchLambdaFunctionServiceRole887D1813",
+      ],
+      "Properties": {
+        "Code": {
+          "S3Bucket": {
+            "Fn::Sub": "cdk-hnb659fds-assets-\${AWS::AccountId}-\${AWS::Region}",
+          },
+          "S3Key": "6e29686a502547f429a2e292f1339494dd763d1d4925636df0c743523ae8b413.zip",
+        },
+        "Environment": {
+          "Variables": {
+            "EVENT_END_TIME": "2024-09-07T07:54:39.926Z",
+            "HOST_NAME": "",
+            "INDEX_OF_RENDITIONS": "0",
+            "NODE_ENV": "test",
+            "PLAYBACK_CONFIGURATION_NAME": "89f21bd7-bbb0-4a9b-bd81-e7cb6f9ad48b",
+            "RETRIEVAL_WINDOW_LENGTH_IN_SECONDS": "120",
+            "SESSION_INITIALIZATION_URL": {
+              "Fn::Join": [
+                "",
+                [
+                  {
+                    "Fn::GetAtt": [
+                      "MediaTailorWithCloudFrontMediaTailorCfnPlaybackConfiguration77F4E5D7",
+                      "SessionInitializationEndpointPrefix",
+                    ],
+                  },
+                  {
+                    "Fn::Select": [
+                      5,
+                      {
+                        "Fn::Split": [
+                          "/",
+                          {
+                            "Fn::GetAtt": [
+                              "LiveChannelFromMp4MediaPackageV1MediaPackageV1HlsEndpoint735161B2",
+                              "Url",
+                            ],
+                          },
+                        ],
+                      },
+                    ],
+                  },
+                  "/",
+                  {
+                    "Fn::Select": [
+                      6,
+                      {
+                        "Fn::Split": [
+                          "/",
+                          {
+                            "Fn::GetAtt": [
+                              "LiveChannelFromMp4MediaPackageV1MediaPackageV1HlsEndpoint735161B2",
+                              "Url",
+                            ],
+                          },
+                        ],
+                      },
+                    ],
+                  },
+                ],
+              ],
+            },
+          },
+        },
+        "Handler": "index.handler",
+        "Role": {
+          "Fn::GetAtt": [
+            "PrefetchSchedulerNodejsFunctionPrefetchLambdaFunctionServiceRole887D1813",
+            "Arn",
+          ],
+        },
+        "Runtime": "nodejs18.x",
+        "Timeout": 30,
+      },
+      "Type": "AWS::Lambda::Function",
+    },
+    "PrefetchSchedulerNodejsFunctionPrefetchLambdaFunctionLogRetentionAA573410": {
+      "Properties": {
+        "LogGroupName": {
+          "Fn::Join": [
+            "",
+            [
+              "/aws/lambda/",
+              {
+                "Ref": "PrefetchSchedulerNodejsFunctionPrefetchLambdaFunction2E1277ED",
+              },
+            ],
+          ],
+        },
+        "RetentionInDays": 14,
+        "ServiceToken": {
+          "Fn::GetAtt": [
+            "LogRetentionaae0aa3c5b4d4f87b02d85b201efdd8aFD4BFC8A",
+            "Arn",
+          ],
+        },
+      },
+      "Type": "Custom::LogRetention",
+    },
+    "PrefetchSchedulerNodejsFunctionPrefetchLambdaFunctionServiceRole887D1813": {
+      "Properties": {
+        "AssumeRolePolicyDocument": {
+          "Statement": [
+            {
+              "Action": "sts:AssumeRole",
+              "Effect": "Allow",
+              "Principal": {
+                "Service": "lambda.amazonaws.com",
+              },
+            },
+          ],
+          "Version": "2012-10-17",
+        },
+        "ManagedPolicyArns": [
+          {
+            "Fn::Join": [
+              "",
+              [
+                "arn:",
+                {
+                  "Ref": "AWS::Partition",
+                },
+                ":iam::aws:policy/service-role/AWSLambdaBasicExecutionRole",
+              ],
+            ],
+          },
+        ],
+      },
+      "Type": "AWS::IAM::Role",
+    },
+    "PrefetchSchedulerNodejsFunctionPrefetchLambdaFunctionServiceRoleDefaultPolicyF65A949C": {
+      "Properties": {
+        "PolicyDocument": {
+          "Statement": [
+            {
+              "Action": "mediatailor:*",
+              "Effect": "Allow",
+              "Resource": "*",
+            },
+          ],
+          "Version": "2012-10-17",
+        },
+        "PolicyName": "PrefetchSchedulerNodejsFunctionPrefetchLambdaFunctionServiceRoleDefaultPolicyF65A949C",
+        "Roles": [
+          {
+            "Ref": "PrefetchSchedulerNodejsFunctionPrefetchLambdaFunctionServiceRole887D1813",
+          },
+        ],
+      },
+      "Type": "AWS::IAM::Policy",
+    },
+    "PrefetchSchedulerStateMachine6BEF6AF5": {
+      "DeletionPolicy": "Delete",
+      "DependsOn": [
+        "PrefetchSchedulerStateMachineRoleDefaultPolicyDBE424F0",
+        "PrefetchSchedulerStateMachineRole0E34BE81",
+      ],
+      "Properties": {
+        "DefinitionString": {
+          "Fn::Join": [
+            "",
+            [
+              "{"StartAt":"Start","States":{"Start":{"Type":"Pass","Parameters":{"Payload":{"prefetchList":[]}},"Next":"Prepare"},"Prepare":{"Type":"Wait","Seconds":1,"Next":"Wait"},"Wait":{"Type":"Wait","Seconds":2,"Next":"Invoke MediaTailor prefetch API"},"Choice":{"Type":"Choice","Choices":[{"Variable":"$.Payload.timestamp","TimestampLessThan":"2024-09-07T07:54:39.926Z","Next":"Wait"}],"Default":"Done"},"Invoke MediaTailor prefetch API":{"Next":"Choice","Retry":[{"ErrorEquals":["Lambda.ClientExecutionTimeoutException","Lambda.ServiceException","Lambda.AWSLambdaException","Lambda.SdkClientException"],"IntervalSeconds":2,"MaxAttempts":6,"BackoffRate":2}],"Type":"Task","InputPath":"$.Payload","Resource":"arn:",
+              {
+                "Ref": "AWS::Partition",
+              },
+              ":states:::lambda:invoke","Parameters":{"FunctionName":"",
+              {
+                "Fn::GetAtt": [
+                  "PrefetchSchedulerNodejsFunctionPrefetchLambdaFunction2E1277ED",
+                  "Arn",
+                ],
+              },
+              "","Payload.$":"$"}},"Done":{"Type":"Succeed"}}}",
+            ],
+          ],
+        },
+        "RoleArn": {
+          "Fn::GetAtt": [
+            "PrefetchSchedulerStateMachineRole0E34BE81",
+            "Arn",
+          ],
+        },
+      },
+      "Type": "AWS::StepFunctions::StateMachine",
+      "UpdateReplacePolicy": "Delete",
+    },
+    "PrefetchSchedulerStateMachineEventsRole1CBF2BD7": {
+      "Properties": {
+        "AssumeRolePolicyDocument": {
+          "Statement": [
+            {
+              "Action": "sts:AssumeRole",
+              "Effect": "Allow",
+              "Principal": {
+                "Service": "events.amazonaws.com",
+              },
+            },
+          ],
+          "Version": "2012-10-17",
+        },
+      },
+      "Type": "AWS::IAM::Role",
+    },
+    "PrefetchSchedulerStateMachineEventsRoleDefaultPolicy542963B1": {
+      "Properties": {
+        "PolicyDocument": {
+          "Statement": [
+            {
+              "Action": "states:StartExecution",
+              "Effect": "Allow",
+              "Resource": {
+                "Ref": "PrefetchSchedulerStateMachine6BEF6AF5",
+              },
+            },
+          ],
+          "Version": "2012-10-17",
+        },
+        "PolicyName": "PrefetchSchedulerStateMachineEventsRoleDefaultPolicy542963B1",
+        "Roles": [
+          {
+            "Ref": "PrefetchSchedulerStateMachineEventsRole1CBF2BD7",
+          },
+        ],
+      },
+      "Type": "AWS::IAM::Policy",
+    },
+    "PrefetchSchedulerStateMachineRole0E34BE81": {
+      "Properties": {
+        "AssumeRolePolicyDocument": {
+          "Statement": [
+            {
+              "Action": "sts:AssumeRole",
+              "Effect": "Allow",
+              "Principal": {
+                "Service": "states.amazonaws.com",
+              },
+            },
+          ],
+          "Version": "2012-10-17",
+        },
+      },
+      "Type": "AWS::IAM::Role",
+    },
+    "PrefetchSchedulerStateMachineRoleDefaultPolicyDBE424F0": {
+      "Properties": {
+        "PolicyDocument": {
+          "Statement": [
+            {
+              "Action": "lambda:InvokeFunction",
+              "Effect": "Allow",
+              "Resource": [
+                {
+                  "Fn::GetAtt": [
+                    "PrefetchSchedulerNodejsFunctionPrefetchLambdaFunction2E1277ED",
+                    "Arn",
+                  ],
+                },
+                {
+                  "Fn::Join": [
+                    "",
+                    [
+                      {
+                        "Fn::GetAtt": [
+                          "PrefetchSchedulerNodejsFunctionPrefetchLambdaFunction2E1277ED",
+                          "Arn",
+                        ],
+                      },
+                      ":*",
+                    ],
+                  ],
+                },
+              ],
+            },
+          ],
+          "Version": "2012-10-17",
+        },
+        "PolicyName": "PrefetchSchedulerStateMachineRoleDefaultPolicyDBE424F0",
+        "Roles": [
+          {
+            "Ref": "PrefetchSchedulerStateMachineRole0E34BE81",
+          },
+        ],
+      },
+      "Type": "AWS::IAM::Policy",
+    },
+    "ScteScheduler1EventBridgeScheduleInvokeFunctionEveryXMinutesEA306CB6": {
+      "Properties": {
+        "ScheduleExpression": "cron(34 7 7 9 ? 2024)",
+        "State": "ENABLED",
+        "Targets": [
+          {
+            "Arn": {
+              "Ref": "ScteScheduler1StateMachine2A8E6B45",
+            },
+            "Id": "Target0",
+            "RoleArn": {
+              "Fn::GetAtt": [
+                "ScteScheduler1StateMachineEventsRole2675DBA7",
+                "Arn",
+              ],
+            },
+          },
+        ],
+      },
+      "Type": "AWS::Events::Rule",
+    },
+    "ScteScheduler1ScheduleSCTEA3D6732C": {
+      "DependsOn": [
+        "ScteScheduler1ScheduleSCTEServiceRoleDefaultPolicy7B35C517",
+        "ScteScheduler1ScheduleSCTEServiceRoleFEDBF86E",
+      ],
+      "Properties": {
+        "Code": {
+          "S3Bucket": {
+            "Fn::Sub": "cdk-hnb659fds-assets-\${AWS::AccountId}-\${AWS::Region}",
+          },
+          "S3Key": "1d2d211f8159dc6cdf1fdd7d09705d12a467948a55195a93f8963b7afddc3308.zip",
+        },
+        "Environment": {
+          "Variables": {
+            "AVAIL_LENGTH": "60",
+            "CHANNEL_ID": {
+              "Ref": "LiveChannelFromMp4MediaLiveCfnChannelChannel2738FC17",
+            },
+            "NODE_ENV": "test",
+          },
+        },
+        "Handler": "index.handler",
+        "Role": {
+          "Fn::GetAtt": [
+            "ScteScheduler1ScheduleSCTEServiceRoleFEDBF86E",
+            "Arn",
+          ],
+        },
+        "Runtime": "nodejs18.x",
+        "Timeout": 30,
+      },
+      "Type": "AWS::Lambda::Function",
+    },
+    "ScteScheduler1ScheduleSCTELogRetentionF36077F9": {
+      "Properties": {
+        "LogGroupName": {
+          "Fn::Join": [
+            "",
+            [
+              "/aws/lambda/",
+              {
+                "Ref": "ScteScheduler1ScheduleSCTEA3D6732C",
+              },
+            ],
+          ],
+        },
+        "RetentionInDays": 14,
+        "ServiceToken": {
+          "Fn::GetAtt": [
+            "LogRetentionaae0aa3c5b4d4f87b02d85b201efdd8aFD4BFC8A",
+            "Arn",
+          ],
+        },
+      },
+      "Type": "Custom::LogRetention",
+    },
+    "ScteScheduler1ScheduleSCTEServiceRoleDefaultPolicy7B35C517": {
+      "Properties": {
+        "PolicyDocument": {
+          "Statement": [
+            {
+              "Action": "medialive:*",
+              "Effect": "Allow",
+              "Resource": "*",
+            },
+          ],
+          "Version": "2012-10-17",
+        },
+        "PolicyName": "ScteScheduler1ScheduleSCTEServiceRoleDefaultPolicy7B35C517",
+        "Roles": [
+          {
+            "Ref": "ScteScheduler1ScheduleSCTEServiceRoleFEDBF86E",
+          },
+        ],
+      },
+      "Type": "AWS::IAM::Policy",
+    },
+    "ScteScheduler1ScheduleSCTEServiceRoleFEDBF86E": {
+      "Properties": {
+        "AssumeRolePolicyDocument": {
+          "Statement": [
+            {
+              "Action": "sts:AssumeRole",
+              "Effect": "Allow",
+              "Principal": {
+                "Service": "lambda.amazonaws.com",
+              },
+            },
+          ],
+          "Version": "2012-10-17",
+        },
+        "ManagedPolicyArns": [
+          {
+            "Fn::Join": [
+              "",
+              [
+                "arn:",
+                {
+                  "Ref": "AWS::Partition",
+                },
+                ":iam::aws:policy/service-role/AWSLambdaBasicExecutionRole",
+              ],
+            ],
+          },
+        ],
+      },
+      "Type": "AWS::IAM::Role",
+    },
+    "ScteScheduler1StateMachine2A8E6B45": {
+      "DeletionPolicy": "Delete",
+      "DependsOn": [
+        "ScteScheduler1StateMachineRoleDefaultPolicyB8C67674",
+        "ScteScheduler1StateMachineRole5E641C13",
+      ],
+      "Properties": {
+        "DefinitionString": {
+          "Fn::Join": [
+            "",
+            [
+              "{"StartAt":"Start","States":{"Start":{"Type":"Pass","Parameters":{"Payload":{"i":0}},"Next":"Wait for 6-min"},"Wait for 6-min":{"Type":"Wait","Seconds":360,"Next":"Invoke SCTE scheduler Lambda function"},"Check if repaeted 3 times":{"Type":"Choice","Choices":[{"Variable":"$.Payload.i","NumericLessThan":3,"Next":"Wait for 6-min"}],"Default":"Wait for 420-sec"},"Invoke SCTE scheduler Lambda function":{"Next":"Check if repaeted 3 times","Retry":[{"ErrorEquals":["Lambda.ClientExecutionTimeoutException","Lambda.ServiceException","Lambda.AWSLambdaException","Lambda.SdkClientException"],"IntervalSeconds":2,"MaxAttempts":6,"BackoffRate":2}],"Type":"Task","InputPath":"$.Payload","Resource":"arn:",
+              {
+                "Ref": "AWS::Partition",
+              },
+              ":states:::lambda:invoke","Parameters":{"FunctionName":"",
+              {
+                "Fn::GetAtt": [
+                  "ScteScheduler1ScheduleSCTEA3D6732C",
+                  "Arn",
+                ],
+              },
+              "","Payload.$":"$"}},"Wait for 420-sec":{"Type":"Wait","Seconds":420,"Next":"Done"},"Done":{"Type":"Succeed"}}}",
+            ],
+          ],
+        },
+        "RoleArn": {
+          "Fn::GetAtt": [
+            "ScteScheduler1StateMachineRole5E641C13",
+            "Arn",
+          ],
+        },
+      },
+      "Type": "AWS::StepFunctions::StateMachine",
+      "UpdateReplacePolicy": "Delete",
+    },
+    "ScteScheduler1StateMachineEventsRole2675DBA7": {
+      "Properties": {
+        "AssumeRolePolicyDocument": {
+          "Statement": [
+            {
+              "Action": "sts:AssumeRole",
+              "Effect": "Allow",
+              "Principal": {
+                "Service": "events.amazonaws.com",
+              },
+            },
+          ],
+          "Version": "2012-10-17",
+        },
+      },
+      "Type": "AWS::IAM::Role",
+    },
+    "ScteScheduler1StateMachineEventsRoleDefaultPolicy81DC0B42": {
+      "Properties": {
+        "PolicyDocument": {
+          "Statement": [
+            {
+              "Action": "states:StartExecution",
+              "Effect": "Allow",
+              "Resource": {
+                "Ref": "ScteScheduler1StateMachine2A8E6B45",
+              },
+            },
+          ],
+          "Version": "2012-10-17",
+        },
+        "PolicyName": "ScteScheduler1StateMachineEventsRoleDefaultPolicy81DC0B42",
+        "Roles": [
+          {
+            "Ref": "ScteScheduler1StateMachineEventsRole2675DBA7",
+          },
+        ],
+      },
+      "Type": "AWS::IAM::Policy",
+    },
+    "ScteScheduler1StateMachineRole5E641C13": {
+      "Properties": {
+        "AssumeRolePolicyDocument": {
+          "Statement": [
+            {
+              "Action": "sts:AssumeRole",
+              "Effect": "Allow",
+              "Principal": {
+                "Service": "states.amazonaws.com",
+              },
+            },
+          ],
+          "Version": "2012-10-17",
+        },
+      },
+      "Type": "AWS::IAM::Role",
+    },
+    "ScteScheduler1StateMachineRoleDefaultPolicyB8C67674": {
+      "Properties": {
+        "PolicyDocument": {
+          "Statement": [
+            {
+              "Action": "lambda:InvokeFunction",
+              "Effect": "Allow",
+              "Resource": [
+                {
+                  "Fn::GetAtt": [
+                    "ScteScheduler1ScheduleSCTEA3D6732C",
+                    "Arn",
+                  ],
+                },
+                {
+                  "Fn::Join": [
+                    "",
+                    [
+                      {
+                        "Fn::GetAtt": [
+                          "ScteScheduler1ScheduleSCTEA3D6732C",
+                          "Arn",
+                        ],
+                      },
+                      ":*",
+                    ],
+                  ],
+                },
+              ],
+            },
+          ],
+          "Version": "2012-10-17",
+        },
+        "PolicyName": "ScteScheduler1StateMachineRoleDefaultPolicyB8C67674",
+        "Roles": [
+          {
+            "Ref": "ScteScheduler1StateMachineRole5E641C13",
+          },
+        ],
+      },
+      "Type": "AWS::IAM::Policy",
+    },
+    "SessionRunnerEventBridgeSchedule0InvokeFunctionEveryXMinutes9F00C9F5": {
+      "Properties": {
+        "ScheduleExpression": "cron(34 7 7 9 ? 2024)",
+        "State": "ENABLED",
+        "Targets": [
+          {
+            "Arn": {
+              "Ref": "SessionRunnerStateMachine0CCC4C2FC",
+            },
+            "Id": "Target0",
+            "RoleArn": {
+              "Fn::GetAtt": [
+                "SessionRunnerStateMachine0EventsRoleB3D875E6",
+                "Arn",
+              ],
+            },
+          },
+        ],
+      },
+      "Type": "AWS::Events::Rule",
+    },
+    "SessionRunnerNodejsFunctionFetchLambdaFunction0F58A65F2": {
+      "DependsOn": [
+        "SessionRunnerNodejsFunctionFetchLambdaFunction0ServiceRole5F576242",
+      ],
+      "Properties": {
+        "Code": {
+          "S3Bucket": {
+            "Fn::Sub": "cdk-hnb659fds-assets-\${AWS::AccountId}-\${AWS::Region}",
+          },
+          "S3Key": "b17e4a802bdde13b0c8cbebe482eaad31ebcf10f4eb14bacb45e9fcda0cf96e0.zip",
+        },
+        "Environment": {
+          "Variables": {
+            "EVENT_START_TIME": "2024-09-07T07:34:39.926Z",
+            "HOST_NAME": "",
+            "INDEX_OF_RENDITIONS": "0",
+            "NODE_ENV": "test",
+            "SESSION_INITIALIZATION_URL": {
+              "Fn::Join": [
+                "",
+                [
+                  {
+                    "Fn::GetAtt": [
+                      "MediaTailorWithCloudFrontMediaTailorCfnPlaybackConfiguration77F4E5D7",
+                      "SessionInitializationEndpointPrefix",
+                    ],
+                  },
+                  {
+                    "Fn::Select": [
+                      5,
+                      {
+                        "Fn::Split": [
+                          "/",
+                          {
+                            "Fn::GetAtt": [
+                              "LiveChannelFromMp4MediaPackageV1MediaPackageV1HlsEndpoint735161B2",
+                              "Url",
+                            ],
+                          },
+                        ],
+                      },
+                    ],
+                  },
+                  "/",
+                  {
+                    "Fn::Select": [
+                      6,
+                      {
+                        "Fn::Split": [
+                          "/",
+                          {
+                            "Fn::GetAtt": [
+                              "LiveChannelFromMp4MediaPackageV1MediaPackageV1HlsEndpoint735161B2",
+                              "Url",
+                            ],
+                          },
+                        ],
+                      },
+                    ],
+                  },
+                ],
+              ],
+            },
+            "SESSION_REQUIREMENTS": "{"growthPattern":"LINEAR","graph":[{"pointInSeconds":0,"sessionVolume":1}]}",
+          },
+        },
+        "Handler": "index.handler",
+        "Role": {
+          "Fn::GetAtt": [
+            "SessionRunnerNodejsFunctionFetchLambdaFunction0ServiceRole5F576242",
+            "Arn",
+          ],
+        },
+        "Runtime": "nodejs18.x",
+        "Timeout": 30,
+      },
+      "Type": "AWS::Lambda::Function",
+    },
+    "SessionRunnerNodejsFunctionFetchLambdaFunction0LogRetention77636EC3": {
+      "Properties": {
+        "LogGroupName": {
+          "Fn::Join": [
+            "",
+            [
+              "/aws/lambda/",
+              {
+                "Ref": "SessionRunnerNodejsFunctionFetchLambdaFunction0F58A65F2",
+              },
+            ],
+          ],
+        },
+        "RetentionInDays": 14,
+        "ServiceToken": {
+          "Fn::GetAtt": [
+            "LogRetentionaae0aa3c5b4d4f87b02d85b201efdd8aFD4BFC8A",
+            "Arn",
+          ],
+        },
+      },
+      "Type": "Custom::LogRetention",
+    },
+    "SessionRunnerNodejsFunctionFetchLambdaFunction0ServiceRole5F576242": {
+      "Properties": {
+        "AssumeRolePolicyDocument": {
+          "Statement": [
+            {
+              "Action": "sts:AssumeRole",
+              "Effect": "Allow",
+              "Principal": {
+                "Service": "lambda.amazonaws.com",
+              },
+            },
+          ],
+          "Version": "2012-10-17",
+        },
+        "ManagedPolicyArns": [
+          {
+            "Fn::Join": [
+              "",
+              [
+                "arn:",
+                {
+                  "Ref": "AWS::Partition",
+                },
+                ":iam::aws:policy/service-role/AWSLambdaBasicExecutionRole",
+              ],
+            ],
+          },
+        ],
+      },
+      "Type": "AWS::IAM::Role",
+    },
+    "SessionRunnerStateMachine0CCC4C2FC": {
+      "DeletionPolicy": "Delete",
+      "DependsOn": [
+        "SessionRunnerStateMachine0RoleDefaultPolicyD26A8205",
+        "SessionRunnerStateMachine0RoleBDA29D0D",
+      ],
+      "Properties": {
+        "DefinitionString": {
+          "Fn::Join": [
+            "",
+            [
+              "{"StartAt":"Start0","States":{"Start0":{"Type":"Pass","Parameters":{"Payload":{"urlList":[]}},"Next":"Prepare0"},"Prepare0":{"Type":"Wait","Seconds":1,"Next":"Wait0"},"Wait0":{"Type":"Wait","Seconds":2,"Next":"LambdaInvoke0"},"Choice0":{"Type":"Choice","Choices":[{"Variable":"$.Payload.timestamp","TimestampLessThan":"2024-09-07T07:54:39.926Z","Next":"Wait0"}],"Default":"Done0"},"LambdaInvoke0":{"Next":"Choice0","Retry":[{"ErrorEquals":["Lambda.ClientExecutionTimeoutException","Lambda.ServiceException","Lambda.AWSLambdaException","Lambda.SdkClientException"],"IntervalSeconds":2,"MaxAttempts":6,"BackoffRate":2}],"Type":"Task","InputPath":"$.Payload","Resource":"arn:",
+              {
+                "Ref": "AWS::Partition",
+              },
+              ":states:::lambda:invoke","Parameters":{"FunctionName":"",
+              {
+                "Fn::GetAtt": [
+                  "SessionRunnerNodejsFunctionFetchLambdaFunction0F58A65F2",
+                  "Arn",
+                ],
+              },
+              "","Payload.$":"$"}},"Done0":{"Type":"Succeed"}}}",
+            ],
+          ],
+        },
+        "RoleArn": {
+          "Fn::GetAtt": [
+            "SessionRunnerStateMachine0RoleBDA29D0D",
+            "Arn",
+          ],
+        },
+      },
+      "Type": "AWS::StepFunctions::StateMachine",
+      "UpdateReplacePolicy": "Delete",
+    },
+    "SessionRunnerStateMachine0EventsRoleB3D875E6": {
+      "Properties": {
+        "AssumeRolePolicyDocument": {
+          "Statement": [
+            {
+              "Action": "sts:AssumeRole",
+              "Effect": "Allow",
+              "Principal": {
+                "Service": "events.amazonaws.com",
+              },
+            },
+          ],
+          "Version": "2012-10-17",
+        },
+      },
+      "Type": "AWS::IAM::Role",
+    },
+    "SessionRunnerStateMachine0EventsRoleDefaultPolicyC8D08651": {
+      "Properties": {
+        "PolicyDocument": {
+          "Statement": [
+            {
+              "Action": "states:StartExecution",
+              "Effect": "Allow",
+              "Resource": {
+                "Ref": "SessionRunnerStateMachine0CCC4C2FC",
+              },
+            },
+          ],
+          "Version": "2012-10-17",
+        },
+        "PolicyName": "SessionRunnerStateMachine0EventsRoleDefaultPolicyC8D08651",
+        "Roles": [
+          {
+            "Ref": "SessionRunnerStateMachine0EventsRoleB3D875E6",
+          },
+        ],
+      },
+      "Type": "AWS::IAM::Policy",
+    },
+    "SessionRunnerStateMachine0RoleBDA29D0D": {
+      "Properties": {
+        "AssumeRolePolicyDocument": {
+          "Statement": [
+            {
+              "Action": "sts:AssumeRole",
+              "Effect": "Allow",
+              "Principal": {
+                "Service": "states.amazonaws.com",
+              },
+            },
+          ],
+          "Version": "2012-10-17",
+        },
+      },
+      "Type": "AWS::IAM::Role",
+    },
+    "SessionRunnerStateMachine0RoleDefaultPolicyD26A8205": {
+      "Properties": {
+        "PolicyDocument": {
+          "Statement": [
+            {
+              "Action": "lambda:InvokeFunction",
+              "Effect": "Allow",
+              "Resource": [
+                {
+                  "Fn::GetAtt": [
+                    "SessionRunnerNodejsFunctionFetchLambdaFunction0F58A65F2",
+                    "Arn",
+                  ],
+                },
+                {
+                  "Fn::Join": [
+                    "",
+                    [
+                      {
+                        "Fn::GetAtt": [
+                          "SessionRunnerNodejsFunctionFetchLambdaFunction0F58A65F2",
+                          "Arn",
+                        ],
+                      },
+                      ":*",
+                    ],
+                  ],
+                },
+              ],
+            },
+          ],
+          "Version": "2012-10-17",
+        },
+        "PolicyName": "SessionRunnerStateMachine0RoleDefaultPolicyD26A8205",
+        "Roles": [
+          {
+            "Ref": "SessionRunnerStateMachine0RoleBDA29D0D",
+          },
+        ],
+      },
+      "Type": "AWS::IAM::Policy",
+    },
+  },
+  "Rules": {
+    "CheckBootstrapVersion": {
+      "Assertions": [
+        {
+          "Assert": {
+            "Fn::Not": [
+              {
+                "Fn::Contains": [
+                  [
+                    "1",
+                    "2",
+                    "3",
+                    "4",
+                    "5",
+                  ],
+                  {
+                    "Ref": "BootstrapVersion",
+                  },
+                ],
+              },
+            ],
+          },
+          "AssertDescription": "CDK bootstrap stack version 6 required. Please run 'cdk bootstrap' with a recent version of the CDK CLI.",
+        },
+      ],
+    },
+  },
+}
+`;
